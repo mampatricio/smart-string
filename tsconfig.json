@@ -5,7 +5,7 @@
 
     // libs recomendadas
     "lib": ["ESNext"],
-    "types": ["node"],
+    "types": ["vitest","node"],
 
     // geração de tipos
     "declaration": true,

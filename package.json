@@ -26,6 +26,8 @@
     "@types/node": "^24.10.1",
     "@typescript-eslint/eslint-plugin": "^8.48.1",
     "@typescript-eslint/parser": "^8.48.1",
+    "@vitest/coverage-v8": "^4.0.15",
+    "@vitest/ui": "^4.0.15",
     "eslint": "^9.39.1",
     "prettier": "^3.7.4",
     "taskin": "^1.0.11",
