@@ -1,13 +1,23 @@
-# @marcospatricio/smart-string
+# @mpatricio/smart-string
 
-Utilities for manipulating strings in a clean, reliable and framework-agnostic way.
+Um conjunto de utilitários simples e poderosos para manipulação de strings de forma consistente, segura e independente de frameworks.
 
-## Install
+Ideal para uso em projetos Node.js, APIs, aplicações web e qualquer aplicação TypeScript/JavaScript.
+
+---
+
+## 🚀 Instalação
 
 ```sh
-pnpm add @marcospatricio/smart-string
+pnpm add @mpatricio/smart-string
+# ou
+npm install @mpatricio/smart-string
+# ou
+yarn add @mpatricio/smart-string
 
-import { slugify, capitalize } from "@marcospatricio/smart-string";
+Uso Básico
+
+import { slugify, capitalize } from "@mpatricio/smart-string";
 
 slugify("Olá Mundo");
 // → "ola-mundo"
@@ -15,23 +25,43 @@ slugify("Olá Mundo");
 capitalize("mARcoS");
 // → "Marcos"
 
-Methods
-slugify(text)
 
-Converts text into a URL-friendly slug.
+Métodos Disponíveis
 
-truncate(text, max)
+| Método                  | Descrição                                                                   |
+| ----------------------- | --------------------------------------------------------------------------- |
+| **slugify(text)**       | Converte uma string em um slug: minúsculas, sem acentos, espaços viram `-`. |
+| **truncate(text, max)** | Limita o tamanho da string e adiciona `...` no final.                       |
+| **removeAccents(text)** | Remove acentuação e diacríticos.                                            |
+| **camelCase(text)**     | Converte para camelCase.                                                    |
+| **kebabCase(text)**     | Converte para kebab-case.                                                   |
+| **capitalize(text)**    | Torna a primeira letra maiúscula e o restante minúsculo.                    |
 
-Cuts long strings with ellipsis.
 
-removeAccents(text)
+Exemplos Detalhados
 
-Removes diacritics from characters.
+slugify("Olá, Mundo Lindo!");
+// → "ola-mundo-lindo"
 
-camelCase(text)
+truncate("Este texto é muito grande", 10);
+// → "Este text..."
 
-Converts to camelCase.
+removeAccents("coração ação São Paulo");
+// → "coracao acao Sao Paulo"
 
-kebabCase(text)
+camelCase("Hello world example");
+// → "helloWorldExample"
 
-Converts to kebab-case.
+kebabCase("Hello World Example");
+// → "hello-world-example"
+
+capitalize("jOão");
+// → "João"
+
+
+Importação Alternativa 
+
+import * as Smart from "@mpatricio/smart-string";
+
+Smart.kebabCase("Olá Mundo");
+// → "ola-mundo"
