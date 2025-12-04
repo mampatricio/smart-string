@@ -3,7 +3,7 @@
   "provider": {
     "type": "fs",
     "config": {
-      "tasksDir": "TASKS"
+      "tasksDirectory": ".tasks"
     }
   }
 }
